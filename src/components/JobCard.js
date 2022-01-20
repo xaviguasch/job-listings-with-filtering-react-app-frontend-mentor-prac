@@ -2,7 +2,7 @@ import React from 'react'
 
 import './JobCard.css'
 
-const JobCard = ({ data }) => {
+const JobCard = ({ data, onAddFilterField }) => {
   const {
     company,
     logo,
@@ -12,9 +12,18 @@ const JobCard = ({ data }) => {
     postedAt,
     contract,
     location,
+    role,
+    languages,
+    tools,
   } = data
+
+  const sendFilterField = (e) => {
+    onAddFilterField(e.target.name)
+  }
+
   return (
     <div className='JobCard'>
+      <img src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
       <div className='upper'>
         <span className='company-name'>{company}</span>
         {newBinary && <span className='tag tag--new'>new!</span>}
@@ -23,10 +32,30 @@ const JobCard = ({ data }) => {
       <h2>{position}</h2>
       <div className='lower'>
         <span className='additional'>{postedAt}</span>
+
         <span className='additional'>{contract}</span>
+
         <span className='additional'>{location}</span>
       </div>
-      <img src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
+      <div className='line-break'></div>
+      <div className='buttons-area'>
+        <button onClick={sendFilterField} name={role}>
+          {role}
+        </button>
+        <button onClick={sendFilterField} name={position}>
+          {position}
+        </button>
+        {languages.map((lang) => (
+          <button onClick={sendFilterField} key={lang} name={lang}>
+            {lang}
+          </button>
+        ))}
+        {tools.map((tool) => (
+          <button onClick={sendFilterField} key={tool} name={tool}>
+            {tool}
+          </button>
+        ))}
+      </div>
     </div>
   )
 }
