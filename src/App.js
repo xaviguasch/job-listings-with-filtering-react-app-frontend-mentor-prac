@@ -20,6 +20,30 @@ function App() {
     setFilterFields(filterFields.filter((ff) => ff !== filterClicked))
   }
 
+  // const filteredData = data.filter(
+  //   (el) => filterFields.includes(el.role) || filterFields.includes(el.position)
+  // )
+
+  const getObjectValues = (obj) =>
+    obj && typeof obj === 'object'
+      ? Object.values(obj).map(getObjectValues).flat()
+      : [obj]
+
+  const filteredData = data
+    .map((obj) => getObjectValues(obj))
+    .filter((collection) => {
+      if (filterFields.length > 0) {
+        const checker = (collection, filterFields) => {
+          return filterFields.every((v) => collection.includes(v))
+        }
+        return checker(collection, filterFields)
+      } else {
+        return collection
+      }
+    })
+
+  console.log(filteredData)
+
   return (
     <div className='App'>
       <ActiveFilterArea
