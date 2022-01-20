@@ -29,20 +29,41 @@ function App() {
       ? Object.values(obj).map(getObjectValues).flat()
       : [obj]
 
-  const filteredData = data
-    .map((obj) => getObjectValues(obj))
-    .filter((collection) => {
-      if (filterFields.length > 0) {
-        const checker = (collection, filterFields) => {
-          return filterFields.every((v) => collection.includes(v))
-        }
-        return checker(collection, filterFields)
-      } else {
-        return collection
-      }
-    })
+  // const filteredData = data
+  //   .map((obj) => {
+  //     return getObjectValues(obj)
+  //   })
+  //   .filter((collection) => {
+  //     if (filterFields.length > 0) {
+  //       return filterFields.every((v) => collection.includes(v))
+  //     } else {
+  //       return collection
+  //     }
+  //   })
+  // console.log(filteredData)
 
-  console.log(filteredData)
+  function isObjectValid(collection) {
+    if (filterFields.length > 0) {
+      return filterFields.every((v) => collection.includes(v))
+    } else {
+      return false
+    }
+  }
+
+  const finalData = data.filter((obj) => {
+    if (filterFields.length === 0) {
+      console.log('hola')
+      return obj
+    } else {
+      const objectByValues = getObjectValues(obj)
+
+      if (isObjectValid(objectByValues)) {
+        return obj
+      }
+    }
+  })
+
+  console.log(finalData)
 
   return (
     <div className='App'>
@@ -51,7 +72,7 @@ function App() {
         onRemoveFilterField={removeFilterField}
       />
 
-      {data.map((card) => (
+      {finalData.map((card) => (
         <JobCard key={card.id} data={card} onAddFilterField={addFilterField} />
       ))}
     </div>
