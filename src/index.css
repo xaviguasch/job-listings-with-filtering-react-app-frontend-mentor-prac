@@ -51,12 +51,12 @@
   --clr-dark-green-text: hsla(180, 14%, 20%, 1);
   --clr-white-text: hsla(0, 0%, 100%, 1);
   --clr-grey-text: hsla(180, 8%, 52%, 1);
-  --clr-green-text: hsla(180, 29%, 50%, 1);
+  --clr-green-text: hsl(180, 29%, 50%);
 
   /* Background  */
   --clr-light-green-bg: hsl(180, 52%, 96%);
+  --clr-light-green-2-bg: hsl(180, 28%, 95%);
   --clr-medium-green-bg: hsl(180, 29%, 50%);
-  --clr-light-grey: hsl(180, 28%, 95%);
 }
 
 body {
@@ -103,7 +103,29 @@ img {
 
 .btn {
   font-size: var(--fs-13);
-  color: var(--clr-dark-green-text);
+  color: var(--clr-green-text);
   letter-spacing: -0.1px;
   font-weight: var(--fw-bold);
+}
+
+/* ================== */
+/* Links */
+/* ================== */
+
+/* ================== */
+/* Buttons & inputs */
+/* ================== */
+
+.btn {
+  border: none;
+  background-color: var(--clr-light-green-2-bg);
+  cursor: pointer;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-white-text);
+  background-color: var(--clr-medium-green-bg);
 }
