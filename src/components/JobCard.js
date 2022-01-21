@@ -29,7 +29,7 @@ const JobCard = ({ data, onAddFilterField }) => {
         {newBinary && <span className='tag tag--new'>new!</span>}
         {featured && <span className='tag tag--featured'>featured</span>}
       </div>
-      <h2>{position}</h2>
+      <h2 className='position'>{position}</h2>
       <div className='lower'>
         <span className='additional'>{postedAt}</span>
 
@@ -39,19 +39,19 @@ const JobCard = ({ data, onAddFilterField }) => {
       </div>
       <div className='line-break'></div>
       <div className='buttons-area'>
-        <button onClick={sendFilterField} name={role}>
+        <button className='btn' onClick={sendFilterField} name={role}>
           {role}
         </button>
-        <button onClick={sendFilterField} name={position}>
+        <button className='btn' onClick={sendFilterField} name={position}>
           {position}
         </button>
         {languages.map((lang) => (
-          <button onClick={sendFilterField} key={lang} name={lang}>
+          <button className='btn' onClick={sendFilterField} key={lang} name={lang}>
             {lang}
           </button>
         ))}
         {tools.map((tool) => (
-          <button onClick={sendFilterField} key={tool} name={tool}>
+          <button className='btn' onClick={sendFilterField} key={tool} name={tool}>
             {tool}
           </button>
         ))}
