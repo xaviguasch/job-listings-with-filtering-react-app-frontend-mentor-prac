@@ -52,7 +52,6 @@ function App() {
 
   const finalData = data.filter((obj) => {
     if (filterFields.length === 0) {
-      console.log('hola')
       return obj
     } else {
       const objectByValues = getObjectValues(obj)
