@@ -62,7 +62,15 @@
 }
 
 body {
-  background-color: var(--clr-light-green-bg);
+  background: linear-gradient(
+    to bottom,
+    var(--clr-medium-green-bg) 0%,
+    var(--clr-medium-green-bg) 156px,
+    var(--clr-light-green-bg) 156px,
+    var(--clr-light-green-bg) 100%
+  );
+
+  /* background: url('../public/images/bg-header-mobile.svg'); */
   color: var(--clr-dark-green-text);
   font-family: var(--ff-main);
   font-size: var(--fs-16);

@@ -24,7 +24,9 @@ const JobCard = ({ data, onAddFilterField }) => {
 
   return (
     <div className='JobCard card'>
-      <img className='logo' src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
+      {/* Do we need the process.env.PUBLIC_URL?????? */}
+      {/* <img className='logo' src={process.env.PUBLIC_URL + logo} alt='logo' />{' '} */}
+      <img className='logo' src={logo} alt='logo' />{' '}
       <div className='info-block'>
         <div className='upper'>
           <span className='company-name'>{company}</span>
