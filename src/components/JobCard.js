@@ -15,6 +15,7 @@ const JobCard = ({ data, onAddFilterField }) => {
     role,
     languages,
     tools,
+    level,
   } = data
 
   const sendFilterField = (e) => {
@@ -22,7 +23,7 @@ const JobCard = ({ data, onAddFilterField }) => {
   }
 
   return (
-    <div className='JobCard'>
+    <div className='JobCard card'>
       <img className='logo' src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
       <div className='info-block'>
         <div className='upper'>
@@ -45,8 +46,8 @@ const JobCard = ({ data, onAddFilterField }) => {
         <button className='btn' onClick={sendFilterField} name={role}>
           {role}
         </button>
-        <button className='btn' onClick={sendFilterField} name={position}>
-          {position}
+        <button className='btn' onClick={sendFilterField} name={level}>
+          {level}
         </button>
         {languages.map((lang) => (
           <button className='btn' onClick={sendFilterField} key={lang} name={lang}>

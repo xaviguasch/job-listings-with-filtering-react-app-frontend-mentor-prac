@@ -1,12 +1,4 @@
 .JobCard {
-  background-color: var(--clr-white-bg);
-  border: none;
-  border-radius: 0.5em;
-  border-left: 5px solid var(--clr-medium-green-bg);
-  margin-top: 2.5em;
-  box-shadow: hsla(180, 29%, 50%, 0.2) 0px 8px 24px;
-  padding: 2em 1.5em 1.5em;
-
   position: relative;
 }
 

@@ -1,0 +1,58 @@
+.ActiveFilterArea {
+  background: var(--clr-white-bg);
+  margin-top: -5.75em;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-field-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.filter-field {
+  font-size: var(--fs-13);
+  color: var(--clr-green-text);
+  background-color: var(--clr-light-green-bg);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 2em;
+}
+
+.filter-field span {
+  display: inline-block;
+  padding: 0 0.5em;
+}
+
+.btn--filter-field {
+  display: inline-block;
+  color: var(--clr-white-text);
+  background-color: var(--clr-medium-green-bg);
+  height: 100%;
+  padding: 0 0.5em;
+}
+
+.btn--filter-field:hover,
+.btn--filter-field:active {
+  background-color: var(--clr-dark-green-bg);
+}
+
+.btn--clear {
+  background-color: transparent;
+  color: var(--clr-grey-text);
+}
+
+.btn--clear:hover,
+.btn--clear:active {
+  background-color: unset;
+  color: var(--clr-green-text);
+  text-decoration: underline;
+}

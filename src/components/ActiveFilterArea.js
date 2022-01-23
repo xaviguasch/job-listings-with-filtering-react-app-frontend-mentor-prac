@@ -2,25 +2,41 @@ import React from 'react'
 
 import './ActiveFilterArea.css'
 
-const ActiveFilterArea = ({ filterFields, onRemoveFilterField }) => {
+const ActiveFilterArea = ({ filterFields, onRemoveFilterField, onClearFilterFields }) => {
   const handleRemoveClick = (e) => {
     onRemoveFilterField(e.target.name)
   }
 
-  return (
-    <div className='ActiveFilterArea'>
-      <h2>Active Filter</h2>
+  const handleClearClick = () => {
+    onClearFilterFields()
+  }
 
-      {filterFields.map((field) => (
-        <div key={field}>
-          <p>{field}</p>
-          <button onClick={handleRemoveClick} name={field}>
-            X
-          </button>
+  if (filterFields.length === 0) {
+    return <div></div>
+  } else {
+    return (
+      <div className='ActiveFilterArea card'>
+        <div className='filter-field-group'>
+          {filterFields.map((field) => (
+            <div className='filter-field' key={field}>
+              <span>{field}</span>
+              <button
+                className='btn btn--filter-field'
+                onClick={handleRemoveClick}
+                name={field}
+              >
+                X
+              </button>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  )
+
+        <button className='btn btn--clear' onClick={handleClearClick}>
+          Clear
+        </button>
+      </div>
+    )
+  }
 }
 
 export default ActiveFilterArea

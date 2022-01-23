@@ -20,6 +20,10 @@ function App() {
     setFilterFields(filterFields.filter((ff) => ff !== filterClicked))
   }
 
+  const clearFilterFields = () => {
+    setFilterFields([])
+  }
+
   // const filteredData = data.filter(
   //   (el) => filterFields.includes(el.role) || filterFields.includes(el.position)
   // )
@@ -69,6 +73,7 @@ function App() {
       <ActiveFilterArea
         filterFields={filterFields}
         onRemoveFilterField={removeFilterField}
+        onClearFilterFields={clearFilterFields}
       />
 
       {finalData.map((card) => (
