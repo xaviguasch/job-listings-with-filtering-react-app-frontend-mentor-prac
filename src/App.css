@@ -1,3 +1,22 @@
 .App {
+  position: relative;
   padding: 9.75em 1.5em 2em;
+
+  background: linear-gradient(
+    to bottom,
+    var(--clr-medium-green-bg) 0%,
+    var(--clr-medium-green-bg) 156px,
+    var(--clr-light-green-bg) 156px,
+    var(--clr-light-green-bg) 100%
+  );
+
+  z-index: 0;
+}
+
+.header-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -10;
 }
