@@ -23,19 +23,23 @@ const JobCard = ({ data, onAddFilterField }) => {
 
   return (
     <div className='JobCard'>
-      <img src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
-      <div className='upper'>
-        <span className='company-name'>{company}</span>
-        {newBinary && <span className='tag tag--new'>new!</span>}
-        {featured && <span className='tag tag--featured'>featured</span>}
-      </div>
-      <h2 className='position'>{position}</h2>
-      <div className='lower'>
-        <span className='additional'>{postedAt}</span>
+      <img className='logo' src={process.env.PUBLIC_URL + logo} alt='logo' />{' '}
+      <div className='info-block'>
+        <div className='upper'>
+          <span className='company-name'>{company}</span>
+          <div className='tags'>
+            {newBinary && <span className='tag tag--new'>new!</span>}
+            {featured && <span className='tag tag--featured'>featured</span>}
+          </div>
+        </div>
+        <h2 className='position'>{position}</h2>
+        <div className='lower'>
+          <span className='additional'>{postedAt}</span>
 
-        <span className='additional'>{contract}</span>
+          <span className='additional'>{contract}</span>
 
-        <span className='additional'>{location}</span>
+          <span className='additional'>{location}</span>
+        </div>
       </div>
       <div className='line-break'></div>
       <div className='buttons-area'>

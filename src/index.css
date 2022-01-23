@@ -57,6 +57,8 @@
   --clr-light-green-bg: hsl(180, 52%, 96%);
   --clr-light-green-2-bg: hsl(180, 28%, 95%);
   --clr-medium-green-bg: hsl(180, 29%, 50%);
+  --clr-dark-green-bg: hsl(180, 14%, 20%);
+  --clr-white-bg: hsl(0, 0%, 100%);
 }
 
 body {
@@ -129,3 +131,7 @@ img {
   color: var(--clr-white-text);
   background-color: var(--clr-medium-green-bg);
 }
+
+/* ================== */
+/* Utility styles */
+/* ================== */
