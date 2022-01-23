@@ -41,7 +41,6 @@ const JobCard = ({ data, onAddFilterField }) => {
           <span className='additional'>{location}</span>
         </div>
       </div>
-      <div className='line-break'></div>
       <div className='buttons-area'>
         <button className='btn' onClick={sendFilterField} name={role}>
           {role}
