@@ -78,3 +78,39 @@
   flex-wrap: wrap;
   gap: 1em;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Laptop */
+@media (min-width: 960px) {
+  .JobCard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .logo {
+    position: relative;
+    top: unset;
+    left: unset;
+
+    transform: unset;
+    width: 88px;
+    height: 88px;
+  }
+
+  .info-block {
+    margin-left: 1.5em;
+    gap: 0.5em;
+  }
+
+  .buttons-area {
+    margin-left: auto;
+
+    border-top: unset;
+    margin-top: unset;
+    padding-top: unset;
+  }
+}

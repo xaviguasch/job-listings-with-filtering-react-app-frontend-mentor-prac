@@ -71,7 +71,16 @@ function App() {
 
   return (
     <div className='App'>
-      <img className='header-svg' src='./images/bg-header-mobile.svg' alt='' />
+      <img
+        className='header-svg header-svg--mobile'
+        src='./images/bg-header-mobile.svg'
+        alt=''
+      />
+      <img
+        className='header-svg header-svg--desktop'
+        src='./images/bg-header-desktop.svg'
+        alt=''
+      />
       <ActiveFilterArea
         filterFields={filterFields}
         onRemoveFilterField={removeFilterField}

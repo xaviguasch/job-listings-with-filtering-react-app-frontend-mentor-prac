@@ -20,3 +20,38 @@
 
   z-index: -10;
 }
+
+.header-svg--mobile {
+  top: 0;
+  left: 0;
+
+  z-index: -10;
+
+  /* Svg doesn't stretch with the window when it's a element, HOW TO DO IT? */
+}
+
+.header-svg--desktop {
+  display: none;
+}
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .App {
+    position: relative;
+    padding: 11.75em 2.5em 6em;
+  }
+
+  .header-svg--mobile {
+    display: none;
+  }
+
+  .header-svg--desktop {
+    display: block;
+
+    width: 100%;
+  }
+}

@@ -58,3 +58,24 @@
   color: var(--clr-green-text);
   text-decoration: underline;
 }
+
+/* Laptop */
+@media (min-width: 960px) {
+  .ActiveFilterArea {
+    padding: 1.5em 2.5em;
+
+    margin-top: -4.25em;
+  }
+
+  .filter-field {
+    height: 2.5em;
+  }
+
+  .filter-field span {
+    padding: 0 0.85em;
+  }
+
+  .btn--filter-field {
+    padding: 0 0.75em;
+  }
+}
