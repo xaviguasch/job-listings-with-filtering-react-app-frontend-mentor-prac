@@ -40,11 +40,6 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-  .App {
-    position: relative;
-    padding: 11.75em 2.5em 6em;
-  }
-
   .header-svg--mobile {
     display: none;
   }
@@ -53,5 +48,12 @@
     display: block;
 
     width: 100%;
+  }
+}
+
+/* Laptop */
+@media (min-width: 960px) {
+  .App {
+    padding: 11.75em 2.5em 6em;
   }
 }

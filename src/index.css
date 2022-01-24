@@ -177,3 +177,11 @@ img {
     padding: 2em 2.5em;
   }
 }
+
+/* Widescreen monitors */
+@media (min-width: 1350px) {
+  .card {
+    max-width: 1110px;
+    margin: 2.5em auto 0;
+  }
+}
