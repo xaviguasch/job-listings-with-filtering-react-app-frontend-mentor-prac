@@ -28,6 +28,7 @@ function App() {
   //   (el) => filterFields.includes(el.role) || filterFields.includes(el.position)
   // )
 
+  // Imported function from stack overflow, uses recursion. It extracts all the values of an object, that has nested values inside
   const getObjectValues = (obj) =>
     obj && typeof obj === 'object'
       ? Object.values(obj).map(getObjectValues).flat()

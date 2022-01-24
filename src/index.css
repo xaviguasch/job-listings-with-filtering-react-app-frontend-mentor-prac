@@ -147,3 +147,23 @@ img {
   box-shadow: hsla(180, 29%, 50%, 0.2) 0px 8px 24px;
   padding: 2em 1.5em 1.5em;
 }
+
+/* ================== */
+/* MEDIA QUERIES */
+/* ================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  /* Typography */
+  .company-name {
+    font-size: var(--fs-14);
+  }
+
+  .position {
+    font-size: var(--fs-18);
+  }
+
+  .additional {
+    font-size: var(--fs-15);
+  }
+}
